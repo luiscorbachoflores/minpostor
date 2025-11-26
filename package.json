@@ -1,0 +1,14 @@
+{
+  "name": "impostor-bot",
+  "version": "1.0.0",
+  "description": "Bot minimal para juego del impostor en Minecraft (envía palabra privada a todos menos a un impostor).",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mineflayer": "^4.4.0"
+  }
+}

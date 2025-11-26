@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  impostor-bot:
+    build: .
+    container_name: impostor-bot
+    restart: unless-stopped
+    environment:
+      - MINECRAFT_HOST=${SERVER_HOST}
+      - MINECRAFT_PORT=${SERVER_PORT}
+      - BOT_USERNAME=${USER_BOT}
+      - BOT_PASSWORD=
+      - AUTH_TYPE=offline
+      - DICT_PATH=/data/dictionary.txt
+      - PM_CMD=tell
+      - ADMIN_USERS=${USER_ADMIN} # ejemplo: "AdminNick,OtroAdmin"
+      - MIN_PLAYERS=2
+    volumes:
+      - ./data:/data
+    # Si tu Raspberry Pi necesita variables de plataforma, puedes construir con:
+    # docker compose build --platform linux/arm/v7
