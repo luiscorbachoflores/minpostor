@@ -11,17 +11,13 @@ Bot minimalista que se conecta a tu servidor Minecraft y organiza rondas del jue
 - `Dockerfile`
 - `docker-compose.yml`
 - `data/dictionary.txt` - diccionario de ejemplo (una palabra por línea)
+- `.env` - donde se encuentran todas las variables de entorno 
 
 ## Variables de entorno (configurables)
-- `MINECRAFT_HOST` - host del servidor (IP o dominio)
-- `MINECRAFT_PORT` - puerto (por defecto 25565)
-- `BOT_USERNAME` - nombre de la cuenta del bot
-- `BOT_PASSWORD` - contraseña (si tu servidor es premium y necesita auth)
-- `AUTH_TYPE` - `offline` (por defecto), `mojang`, `microsoft` (si procede)
-- `DICT_PATH` - ruta al diccionario dentro del contenedor (por defecto `/data/dictionary.txt`)
-- `PM_CMD` - comando para mensajes privados (`tell` o `msg`, por ejemplo)
-- `ADMIN_USERS` - lista separada por comas de usuarios autorizados a lanzar comandos (si está vacío, cualquiera puede usarlos)
-- `MIN_PLAYERS` - mínimo de jugadores para iniciar una ronda (por defecto 2)
+- `SERVER_HOST` - host del servidor (IP o dominio)
+- `SERVER_PORT` - puerto (por defecto 25565)
+- `USER_BOT` - nombre de la cuenta del bot
+- `USER_ADMIN` - lista separada por comas de usuarios autorizados a lanzar comandos (si está vacío, cualquiera puede usarlos)
 
 ## Comandos desde el chat de Minecraft
 - `!startimpostor` - iniciar ronda (bot elegirá palabra/impostor)
